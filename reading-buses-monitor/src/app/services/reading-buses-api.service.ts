@@ -9,7 +9,7 @@ export class ReadingBusesApiService {
 
   constructor(private http: HttpClient) { }
 
-  getLiveJourneys(): Observable<string> {
-    return this.http.get<string>(`https://readingbusesapiproxy.azurewebsites.net/liveJourneys?vehicle=&route=17`);
+  getLiveJourneys(route: string): Observable<IResponse[]> {
+    return this.http.get<IResponse[]>(`https://readingbusesapiproxy.azurewebsites.net/liveJourneys?vehicle=&route=${route}`);
   }
 }
