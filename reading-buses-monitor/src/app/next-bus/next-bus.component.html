@@ -1,1 +1,8 @@
-<pre>{{nextBus | json}}</pre>
+<table mat-table [dataSource]="nextBus" class="mat-elevation-z8">
+  <ng-container matColumnDef="DepartureTime">
+    <th mat-header-cell *matHeaderCellDef>DepartureTime</th>
+    <td mat-cell *matCellDef="let element">{{ element.DepartureTime }}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

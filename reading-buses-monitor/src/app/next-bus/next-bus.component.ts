@@ -34,5 +34,7 @@ export class NextBusComponent implements OnInit {
     });
   }
 
-  public nextBus;
+  displayedColumns: string[] = ['DepartureTime'];
+
+  public nextBus: IVisit[];
 }
