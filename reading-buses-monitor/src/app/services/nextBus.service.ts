@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ReadingBusesApiService } from './reading-buses-api.service';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { map, filter, switchMap } from 'rxjs/operators';
 
 @Injectable({

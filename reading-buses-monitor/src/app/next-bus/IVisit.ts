@@ -1,4 +1,5 @@
 interface IVisit {
+  DepartureTimeDate: Date;
     Location: string;
     LocationName: string;
     Sequence: string;
