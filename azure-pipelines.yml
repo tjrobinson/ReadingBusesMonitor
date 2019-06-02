@@ -16,6 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    cd reading-buses-monitor
     npm install -g @angular/cli
     npm install
     ng build --prod
