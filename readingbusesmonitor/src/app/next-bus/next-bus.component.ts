@@ -15,7 +15,7 @@ export class NextBusComponent implements OnInit {
     this.nextBuses$ = this.nextBusService.getNextBuses("17", "039025630002");
   }
 
-  displayedColumns: string[] = ['DepartureTimeDate'];
+  displayedColumns: string[] = ["DepartureTimeDate", "Overdue"];
 
   nextBuses$: Observable<NextBus[]>;
 }

@@ -1,0 +1,10 @@
+# Transient files
+.idea
+project.assets.json
+project.packagespec.json
+*.nuget.cache
+*.nuget.g.props
+*.nuget.g.targets
+
+# Sensitive configuration
+local.settings.json

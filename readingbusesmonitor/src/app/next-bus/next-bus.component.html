@@ -3,11 +3,10 @@
     <th mat-header-cell *matHeaderCellDef>Departure Time</th>
     <td mat-cell *matCellDef="let element">{{ element.DepartureTimeDate | date:'mediumTime' }}</td>
   </ng-container>
+  <ng-container matColumnDef="Overdue">
+    <th mat-header-cell *matHeaderCellDef>Overdue</th>
+    <td mat-cell *matCellDef="let element">{{ element.Overdue }}</td>
+  </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
-
-
-<!-- <div *ngFor="let nextBuses of nextBuses$ | async">
-  {{nextBuses | json}}
-</div> -->

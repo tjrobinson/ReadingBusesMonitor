@@ -1,4 +1,4 @@
-interface IResponse {
+interface LiveJourneysResponseItem {
   Id: string;
   TimetableId: string;
   Operator: string;
