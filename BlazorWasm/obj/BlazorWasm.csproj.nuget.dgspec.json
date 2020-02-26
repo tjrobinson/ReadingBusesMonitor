@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj": {}
+    "c:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj": {}
   },
   "projects": {
-    "C:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj": {
+    "c:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj",
+        "projectUniqueName": "c:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj",
         "projectName": "BlazorWasm",
-        "projectPath": "C:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj",
+        "projectPath": "c:\\Code\\ReadingBusesMonitor\\BlazorWasm\\BlazorWasm.csproj",
         "packagesPath": "C:\\Users\\tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\ReadingBusesMonitor\\BlazorWasm\\obj\\",
+        "outputPath": "c:\\Code\\ReadingBusesMonitor\\BlazorWasm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tom\\AppData\\Roaming\\NuGet\\NuGet.Config"
