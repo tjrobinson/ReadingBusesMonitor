@@ -1,4 +1,6 @@
-interface LiveJourneysResponseItem {
+import { IVisit } from "./IVisit";
+
+export interface LiveJourneysResponseItem {
   Id: string;
   TimetableId: string;
   Operator: string;

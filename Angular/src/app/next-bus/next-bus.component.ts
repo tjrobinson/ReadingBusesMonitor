@@ -1,7 +1,7 @@
 import { Component, OnInit, Pipe, PipeTransform } from "@angular/core";
 import { NextBusService } from "../services/nextBus.service";
 import { Observable, from, pipe } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { NextBus } from '../reading-buses-api/types/NextBus';
 
 @Component({
   selector: "app-next-bus",

@@ -3,6 +3,11 @@ import { ReadingBusesApiService } from "../reading-buses-api/reading-buses-api.s
 import { Observable } from "rxjs";
 import { map, tap } from "rxjs/operators";
 import { DateTime } from "luxon";
+import { NextBus } from '../reading-buses-api/types/NextBus';
+
+export interface LiveJourneysResponseItem{
+   visits: any[];
+}
 
 @Injectable({
   providedIn: "root"
@@ -27,7 +32,7 @@ export class NextBusService {
           return accumulator;
         };
 
-        var reducedResponse = filteredResponse.reduce(reducer);
+        const reducedResponse = filteredResponse.reduce(reducer);
 
         return reducedResponse.visits;
       }),
@@ -39,7 +44,7 @@ export class NextBusService {
           if (
             departureTimeDateTime > DateTime.local().minus({ minutes: 10 })
           ) {
-            var nextBus = <NextBus>{
+            const nextBus = <NextBus>{
               DepartureTimeDate: new Date(DateTime.fromSQL(visit.DepartureTime).toJSDate()), // e.g. 2019-06-14 20:00:00
               Overdue: DateTime.local() > DateTime.fromSQL(visit.DepartureTime)
             };

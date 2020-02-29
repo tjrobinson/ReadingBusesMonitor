@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/reading-buses-monitor",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -55,6 +56,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -138,5 +143,8 @@
       }
     }
   },
-  "defaultProject": "reading-buses-monitor"
+  "defaultProject": "reading-buses-monitor",
+  "cli": {
+    "analytics": "f0de937b-b91c-4287-a600-17b7cacafbd2"
+  }
 }
