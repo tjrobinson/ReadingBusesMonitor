@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ReadingBusesApiService } from "./reading-buses-api/reading-buses-api.service";
+import { ReadingBusesApiService } from "../reading-buses-api/reading-buses-api.service";
 import { Observable } from "rxjs";
 import { map, tap } from "rxjs/operators";
 import { DateTime } from "luxon";
@@ -31,8 +31,8 @@ export class NextBusService {
 
         return reducedResponse.visits;
       }),
-      map((visits: Visit[]) => {
-        return visits.reduce(function(filtered, visit: Visit) {
+      map((visits: any[]) => {
+        return visits.reduce(function(filtered, visit: any) {
 
           const departureTimeDateTime = DateTime.fromSQL(visit.DepartureTime);
 
@@ -40,7 +40,7 @@ export class NextBusService {
             departureTimeDateTime > DateTime.local().minus({ minutes: 10 })
           ) {
             var nextBus = <NextBus>{
-              DepartureTimeDate: new Date(DateTime.fromSQL(visit.DepartureTime)), // e.g. 2019-06-14 20:00:00
+              DepartureTimeDate: new Date(DateTime.fromSQL(visit.DepartureTime).toJSDate()), // e.g. 2019-06-14 20:00:00
               Overdue: DateTime.local() > DateTime.fromSQL(visit.DepartureTime)
             };
             filtered.push(nextBus);
