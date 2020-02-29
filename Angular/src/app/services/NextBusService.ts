@@ -1,13 +1,11 @@
 import { Injectable } from "@angular/core";
-import { ReadingBusesApiService } from "../reading-buses-api/reading-buses-api.service";
 import { Observable } from "rxjs";
 import { map, tap } from "rxjs/operators";
 import { DateTime } from "luxon";
-import { NextBus } from '../reading-buses-api/types/NextBus';
-
-export interface LiveJourneysResponseItem{
-   visits: any[];
-}
+import { NextBus } from "../../types/NextBus";
+import { ReadingBusesApiService } from "./ReadingBusesApiService";
+import { Visit } from "../../types/Visit";
+import { LiveJourneysResponseItem } from "../../types/LiveJourneysResponseItem";
 
 @Injectable({
   providedIn: "root"
@@ -18,7 +16,7 @@ export class NextBusService {
   getNextBuses(route: string, location: string): Observable<NextBus[]> {
     return this.readingBusesApiService.getLiveJourneys(route).pipe(
       map(response => {
-        var filteredResponse = response.map(
+        const filteredResponse = response.map(
           r =>
             <LiveJourneysResponseItem>{
               visits: r.visits.filter(v => v.Location == location)
@@ -36,8 +34,8 @@ export class NextBusService {
 
         return reducedResponse.visits;
       }),
-      map((visits: any[]) => {
-        return visits.reduce(function(filtered, visit: any) {
+      map((visits: Visit[]) => {
+        return visits.reduce(function(filtered, visit: Visit) {
 
           const departureTimeDateTime = DateTime.fromSQL(visit.DepartureTime);
 

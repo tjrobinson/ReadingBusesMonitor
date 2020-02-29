@@ -1,12 +1,11 @@
-import { Component, OnInit, Pipe, PipeTransform } from "@angular/core";
-import { NextBusService } from "../services/nextBus.service";
-import { Observable, from, pipe } from 'rxjs';
-import { NextBus } from '../reading-buses-api/types/NextBus';
+import { Component, OnInit } from "@angular/core";
+import { Observable } from 'rxjs';
+import { NextBus } from "../../types/NextBus";
+import { NextBusService } from "../services/NextBusService";
 
 @Component({
   selector: "app-next-bus",
-  templateUrl: "./next-bus.component.html",
-  styleUrls: ["./next-bus.component.scss"]
+  templateUrl: "./next-bus.component.html"
 })
 export class NextBusComponent implements OnInit {
   constructor(private nextBusService: NextBusService) {}

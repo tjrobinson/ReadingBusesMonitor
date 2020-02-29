@@ -1,4 +1,4 @@
-export interface IVisit {
+export interface Visit {
   DepartureTimeDate: Date;
   Location: string;
   LocationName: string;

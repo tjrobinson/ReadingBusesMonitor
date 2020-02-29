@@ -1,16 +1,11 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('Reading Buses Monitor App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
-  });
-
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to reading-buses-monitor!');
   });
 
   afterEach(async () => {

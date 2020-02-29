@@ -1,4 +1,4 @@
-import { IVisit } from "./IVisit";
+import { Visit } from "./Visit";
 
 export interface LiveJourneysResponseItem {
   Id: string;
@@ -11,5 +11,5 @@ export interface LiveJourneysResponseItem {
   JourneyCode: string;
   ScheduledStart: string;
   VehicleCode: string;
-  visits: IVisit[];
+  visits: Visit[];
 }
